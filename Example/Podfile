@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FloatButton_Example' do
+  pod 'FloatButton', :path => '../'
+
+  target 'FloatButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,16 @@
+PODS:
+  - FloatButton (0.1.0)
+
+DEPENDENCIES:
+  - FloatButton (from `../`)
+
+EXTERNAL SOURCES:
+  FloatButton:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FloatButton: d953a486f0235a184ecde3bfef3a6cde0514fbfc
+
+PODFILE CHECKSUM: 02685ff9499f743d61f079c7e7d99a78eacf0264
+
+COCOAPODS: 1.8.4
