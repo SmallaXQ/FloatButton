@@ -70,7 +70,7 @@ public class FloatButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.alpha = self.alphaOfDrag
         // 计时器取消
         self.timer?.invalidate()
@@ -84,7 +84,7 @@ public class FloatButton: UIButton {
         }
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.isHasMove = true
         if self.isFirstClick {
             // 拖拽滑动过程中取消单次点击事件
@@ -101,7 +101,7 @@ public class FloatButton: UIButton {
         self.center = CGPoint.init(x: self.center.x + offsetx, y: self.center.y + offsety)
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.isFirstClick = true
         if #available(iOS 10.0, *) {
             self.timer = Timer.init(timeInterval: TimeInterval(self.timeOfWait), repeats: false, block: { (Timer) in
