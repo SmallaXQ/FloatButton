@@ -12,25 +12,25 @@ import UIKit
 public class FloatButton: UIButton {
     
     // 是否可拖拽
-    var isDragEnable: Bool = true
+    public var isDragEnable: Bool = true
     
     // 拖拽后是否自动移到边缘
-    var isAbsortEnable: Bool = true
+    public var isAbsortEnable: Bool = true
     
     // 正常情况下 透明度
-    var alphaOfNormol: CGFloat = 0.4
+    public var alphaOfNormol: CGFloat = 0.4
     
     // 拖拽时的透明度
-    var alphaOfDrag: CGFloat = 1.0
+    public var alphaOfDrag: CGFloat = 1.0
     
     // 拖拽结束后的等待时间
-    var timeOfWait: CGFloat = 1
+    public var timeOfWait: CGFloat = 1
     
     // 拖拽结束后的过渡动画时间
-    var timeOfAnimation: CGFloat = 0.3
+    public var timeOfAnimation: CGFloat = 0.3
     
     // 按钮距离边缘的内边距
-    var paddingOfbutton: CGFloat = 2
+    public var paddingOfbutton: CGFloat = 2
     
     // 计时器
     fileprivate var timer: Timer? = nil
@@ -45,7 +45,7 @@ public class FloatButton: UIButton {
     fileprivate var isFirstClick: Bool = true
     
     // 点击回调
-    var singleClickCallback: (()->())? = nil
+    public var singleClickCallback: (()->())? = nil
     
     convenience public init(_ alphaOfNormol: CGFloat = 0.4,
                      bgColor: UIColor? = UIColor.red,
@@ -160,11 +160,11 @@ public class FloatButton: UIButton {
         }
     }
     
-    @objc func singleClick() {
+    @objc public func singleClick() {
         singleClickCallback?()
     }
     
-    @objc func timeAction() {
+    @objc public func timeAction() {
         UIView.animate(withDuration: TimeInterval(self.timeOfAnimation), animations: {
             self.alpha = self.alphaOfNormol
         })
