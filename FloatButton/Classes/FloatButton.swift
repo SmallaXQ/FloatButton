@@ -47,7 +47,7 @@ public class FloatButton: UIButton {
     // 点击回调
     var singleClickCallback: (()->())? = nil
     
-    convenience init(_ alphaOfNormol: CGFloat = 0.4,
+    convenience open init(_ alphaOfNormol: CGFloat = 0.4,
                      bgColor: UIColor? = UIColor.red,
                      radiuOfButton: CGFloat = 12,
                      titleOfButton: String = "",
