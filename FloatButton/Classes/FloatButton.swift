@@ -9,7 +9,7 @@
 import UIKit
 
 // 悬浮按钮
-class FloatButton: UIButton {
+public class FloatButton: UIButton {
     
     // 是否可拖拽
     var isDragEnable: Bool = true
